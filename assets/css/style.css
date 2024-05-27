@@ -1,57 +1,61 @@
+/*
+body, body * {
+    border-style: dashed;
+    border-color: green;
+}
+*/
 body {
-    display: flex;
-    flex-direction: column;
+    display: grid;
+    justify-items: center;
     align-items: center;
     font-family: Arial, Helvetica, sans-serif;
 }
 
 .space {
-    padding: 10%;
+    padding: 5%;
 }
 
 /* HEADER */
-
-header * {
+/*
+header, header * {
     border-style: dashed;
     border-color: green;
-    column-gap: 12px;
 }
-
+*/
 .head_container {
     width: 100%;
     height: fit-content;
     padding: 8px;
-    border-radius: 8px;
+    border-radius: 16px;
     background: radial-gradient(ellipse at center, fuchsia, darkblue);
 }
 
 header {
     display: grid;
-    grid-template: repeat(4, auto) / 1fr 1fr;
+    grid-template: auto / 1fr 1fr;
     justify-items: center;
 }
 
 header * {
-    display: grid;
     color: white;
 }
 
-header img {
-    grid-column: 2;
-    grid-row: 1 / 5;
+header #h1 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
 }
 
-header span:nth-child(1) {
+header #h1 span:nth-child(1) {
     color:slateblue;
     font-weight: 1000;
     font-size: 12px;
     width: fit-content;
-    height: 164px;
-    align-self: end;
     align-content: end;
 }
 
-header span:nth-child(2) {
+header #h1 span:nth-child(2) {
     font-weight: 1000;
     font-size: 32px;
     width: fit-content;
@@ -59,13 +63,12 @@ header span:nth-child(2) {
     align-self: center;
 }
 
-header p {
+header #h1 p {
     width: 60%;
     height: fit-content;
-    align-self: start;
 }
 
-header button {
+header #h1 button {
     border: none;
     border-radius: 42px;
     height: 42px;
@@ -75,19 +78,29 @@ header button {
     align-content: center;
 }
 
-/* MAIN */
+header #h1 button:hover {
+    background-color: blueviolet;
+}
 
-main #n5, main #n5 * {
+header #h2 {
+    justify-self: center;
+}
+
+/* MAIN */
+/*
+main #m5, main #m5 * {
     border-color: green;
     border-style: dashed;
 }
-
+*/
 .main_container {
     width: 50%;
     height: fit-content;
-    padding: 8px;
-    border-radius: 8px;
-    background-color: lightgray;
+    padding: px;
+    border-radius: 16px;
+    border: gray;
+    border-style: solid;
+    grid-column-start: 1;
 }
 
 main {
@@ -96,42 +109,44 @@ main {
     align-items: center;
 }
 
-main #n1 {
+main #m1 {
     display: grid;
     grid-template: auto / 1fr 1fr 1fr;
     width: 75%;
+    gap: 25%;
 }
 
-main #n1 div {
+main #m1 div {
     display: flex;
     flex-direction: column;
 }
 
-main #n1 div img {
+main #m1 div img {
     width: 50px;
 }
 
-main #n1 div span {
+main #m1 div span {
     font-size: 15px;
     font-weight: 1000;
 }
 
-main #n2 {
+main #m2 {
     display: flex;
     flex-direction: column;
     align-items: center;
 }
 
-main #n2 span:nth-child(2) {
+main #m2 span:nth-child(2) {
     font-weight: 1000;
     font-size: 24px;
 }
 
-main #n2 p {
+main #m2 p {
     width: 75%;
+    text-align: justify;
 }
 
-main #n2 button {
+main #m2 button {
     border: solid;
     border-color: black;
     border-width: 2px;
@@ -144,92 +159,166 @@ main #n2 button {
     font-weight: 750;
 }
 
-main #n3 {
+main #m2 button:hover {
+    background-color: darkgray;
+}
+
+main #m3 {
     display: flex;
     flex-direction: column;
     align-items: center;
+    margin: 36px;
 }
 
-main #n3 div:nth-child(1) {
+main #m3 .p1 {
     display: grid;
     grid-template: auto 1fr / auto 35%;
 }
 
-main #n3 span:nth-child(1) {
+main #m3 .p1 span:nth-child(1) {
     font-size: 12px;
 }
 
-main #n3 span:nth-child(2) {
+main #m3 .p1 span:nth-child(2) {
     grid-row-start: 2;
     font-weight: 1000;
     font-size: 24px;
+    width: 85%;
 }
 
-main #n3 p {
+main #m3 .p1 p {
     grid-row-end: span 2;
+    text-align: justify;
 }
 
-main #n4 #n4_1 {
+main #m4 .p1 {
     display: flex;
     flex-direction: column;
     align-items: center;
 }
 
-main #n4 #n4_1 span:nth-child(1) {
+main #m4 .p1 span:nth-child(1) {
     font-size: 12px;
 }
 
-main #n4 #n4_1 span:nth-child(2) {
+main #m4 .p1 span:nth-child(2) {
     font-size: 24px;
     font-weight: 1000;
     text-align: center;
     width: 65%;
 }
 
-main #n4 #n4_2 {
-    display: grid;
-    grid-template: auto / 1fr 1fr 1fr;
+main #m4 .p2 {
+    display: flex;
+    justify-content: center;
     gap: 80px;
+    margin: 24px 0;
 }
 
-main #n4 #n4_2 div {
+main #m4 .p2 div {
     display: flex;
     flex-direction: column;
+    align-items: center;
 }
 
-main #n4 #n4_2 div span {
+main #m4 .p2 div span {
     font-size: 12px;
 }
 
-main #n4 #n4_2 div img {
+main #m4 .p2 div img {
     width: 142px;
 }
 
-main #n5 {
+main #m5 {
     display: flex;
     flex-direction: row;
+    align-items: center;
+    gap: 40px;
+    margin: 0 36px;
 }
 
-main #n5 img {
-    width: 50%;
-}
-
-main #n5 div {
+main #m5 div {
     display: flex;
     flex-direction: column;
+    align-items: center;
 }
 
-main #n5 div span {
+main #m5 div span {
     font-weight: 1000;
     font-size: 24px;
 }
 
-/* FOOTER */
+main #m5 div p {
+    text-align: justify;
+}
 
+main #m5 div button {
+    height: 42px;
+    padding: 0 16px 0;
+    width: fit-content;
+    border-radius: 42px;
+    border: none;
+}
+
+main #m5 div button:hover {
+    background-color: lightgray;
+}
+
+/* FOOTER */
+/*
+footer #f1, footer #f1 * {
+    border-style: dashed;
+    border-color: green;
+}
+*/
 .footer_container {
     width: 100%;
     height: fit-content;
     padding: 8px;
-    border-radius: 8px;
+    border-radius: 16px;
     background: radial-gradient(ellipse at 20% bottom, fuchsia, darkblue);
+}
+
+footer {
+    display: grid;
+    grid-template: auto auto / 1fr 1fr;
+    column-gap: 56px;
+}
+
+footer * {
+    color: white;
+}
+
+footer #f1 {
+    display: flex;
+    flex-direction: column;
+}
+
+footer #f1 img {
+    width: 42px;
+}
+
+footer #f2 {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+}
+
+footer #f2 .p1 {
+    display: flex;
+    flex-direction: column;
+}
+
+footer #f2 div span:nth-child(1) {
+    font-weight: 1000;
+}
+
+footer #f2 .p2 {
+    display: flex;
+    flex-direction: column;
+}
+
+footer #f3 {
+    grid-column: span 2;
+    justify-self: center;
 }
