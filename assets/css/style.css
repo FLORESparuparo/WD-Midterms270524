@@ -1,0 +1,126 @@
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+/* HEADER */
+
+header * {
+    border-style: dashed;
+    border-color: green;
+    column-gap: 12px;
+}
+
+.head_container {
+    height: fit-content;
+    padding: 8px;
+    border-radius: 8px;
+    background: radial-gradient(ellipse at center, fuchsia, darkblue);
+}
+
+header {
+    display: grid;
+    grid-template: repeat(4, auto) / 1fr 1fr;
+    justify-items: center;
+}
+
+header * {
+    display: grid;
+    color: white;
+}
+
+header img {
+    grid-column: 2;
+    grid-row: 1 / 5;
+}
+
+header span:nth-of-type(1) {
+    color:slateblue;
+    font-weight: 1000;
+    font-size: 12px;
+    width: fit-content;
+    height: 164px;
+    align-self: end;
+    align-content: end;
+}
+
+header span:nth-of-type(2) {
+    font-weight: 1000;
+    font-size: 32px;
+    width: fit-content;
+    height: fit-content;
+    align-self: center;
+}
+
+header p {
+    width: 60%;
+    height: fit-content;
+    align-self: start;
+}
+
+header button {
+    border: none;
+    border-radius: 42px;
+    height: 42px;
+    width: fit-content;
+    padding: 0 16px 0;
+    background-color: mediumpurple;
+    align-content: center;
+}
+
+/* MAIN */
+
+main #n2, main #n2 * {
+    border-color: green;
+    border-style: dashed;
+}
+
+.main_container {
+    width: 50%;
+    height: fit-content;
+    padding: 8px;
+    border-radius: 8px;
+    background-color: lightgray;
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+main #n1 {
+    display: grid;
+    grid-template: auto / 1fr 1fr 1fr;
+    width: 75%;
+}
+
+main #n1 div {
+    display: flex;
+    flex-direction: column;
+}
+
+main #n1 div img {
+    width: 10%;
+}
+
+main #n2 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+main #n2 span:nth-child(2) {
+    font-weight: 1000;
+}
+
+/* FOOTER */
+
+.footer_container {
+    height: fit-content;
+    padding: 8px;
+    border-radius: 8px;
+    background: radial-gradient(ellipse at 20% bottom, fuchsia, darkblue);
+}
